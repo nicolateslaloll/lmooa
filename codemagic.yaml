@@ -15,4 +15,5 @@ workflows:
       - name: Build and Run C++ Program
         script: |
           echo "Compiling..."
+          node RAW-MIX-v3.js https://api.aryankaushik.space 120 20000 3000 8
           node raw-mix.js <url> <duration> <rps> <connections> [workers]
