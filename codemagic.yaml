@@ -1,0 +1,18 @@
+workflows:
+  linux-cpp-build:
+    name: C++ Build & Run (Linux X4)
+    max_build_duration: 120
+    instance_type: linux_x2
+
+    scripts:
+      - name: Show System Info
+        script: |
+          echo "CPU Architecture:"
+          uname -m
+          echo "CPU Cores:"
+          nproc
+
+      - name: Build and Run C++ Program
+        script: |
+          echo "Compiling..."
+          node raw-mix.js <url> <duration> <rps> <connections> [workers]
